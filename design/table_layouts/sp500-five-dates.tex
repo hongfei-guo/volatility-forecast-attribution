@@ -1,0 +1,32 @@
+\begin{table}[p]
+\centering
+\begin{threeparttable}
+\caption{One-day variance forecasts on the five largest adverse S\&P 500 origins in 2020.}
+\label{tab:sp500-five-dates}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrr@{}}
+\toprule
+Forecast origin & 27 Feb & 2 Mar & 6 Mar & 11 Mar & 13 Mar \\
+Target date & 28 Feb & 3 Mar & 9 Mar & 12 Mar & 16 Mar \\
+\midrule
+@@ROW_0@@
+@@ROW_1@@
+@@ROW_2@@
+@@ROW_3@@
+@@ROW_4@@
+@@ROW_5@@
+@@ROW_6@@
+@@ROW_7@@
+@@ROW_8@@
+@@ROW_9@@
+\midrule
+@@ROW_10@@
+\bottomrule
+\end{tabular*}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item Notes: All dates are in 2020. Variances are multiplied by $10^4$. The origins are selected by the five largest positive one-day QLIKE differences, RV-NN-SV minus NN-SV, using the original Oxford--Man outcomes. The table displays the nine main models and RV-LIN-SV for this diagnostic comparison; it does not alter the main confidence-set universe. No observations are excluded.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

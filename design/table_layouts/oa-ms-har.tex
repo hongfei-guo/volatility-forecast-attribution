@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering
+\begin{threeparttable}
+\caption{Descriptive one-day comparisons of RV-LIN-SV-MS with HAR benchmarks.}
+\label{tab:oa-ms-har}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrrr@{}}
+\toprule
+Market & HAR inputs & $N$ & LIN-MS QLIKE & HAR QLIKE & Difference & DM $p$ \\
+\midrule
+@@ROW_0@@
+@@ROW_1@@
+@@ROW_2@@
+@@ROW_3@@
+@@ROW_4@@
+@@ROW_5@@
+\bottomrule
+\end{tabular*}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item Notes: Both HAR specifications predict close-to-close realised variance. CC and OC denote daily, weekly, and monthly realised-variance inputs measured close-to-close and open-to-close, respectively. The OC-input specification is a separate descriptive benchmark and is excluded from the expanded eleven-model confidence set. Differences are LIN-MS minus HAR and are computed before rounding. Within each market, comparisons use the common eligible origins of RV-NN-SV-MS, RV-LIN-SV-MS, RV-NN-SV, and the two HAR specifications. The two-sided DM tests use Newey--West long-run variances and the Harvey--Leybourne--Newbold correction; the six $p$-values are descriptive and unadjusted for multiplicity.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,29 @@
+\begin{table}[htbp]
+\centering
+\begin{threeparttable}
+\caption{Residual-asymmetry and return-only benchmark comparisons.}
+\label{tab:secondary-comparisons}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Comparison & Horizon & S\&P~500 & FTSE~100 & DAX \\
+\midrule
+\multicolumn{5}{l}{\textit{Panel A: RV-RA-NN-SV $-$ RV-NN-SV}} \\
+@@ROW_0@@
+@@ROW_1@@
+@@ROW_2@@
+\addlinespace
+\multicolumn{5}{l}{\textit{Panel B: NN-SV $-$ GARCH$(1,1)$-$t$}} \\
+@@ROW_3@@
+@@ROW_4@@
+@@ROW_5@@
+@@ROW_6@@
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item Notes: Entries are mean loss differences, with two-sided descriptive DM $p$-values in brackets. Negative entries favour the first model named in each panel. RV-RA comparisons use pairwise available samples; the smallest common sample contains 899 origins. The GARCH$(1,1)$-$t$ comparisons use the corresponding common samples reported for the main matched comparisons in Table~\ref{main-tab:matched-comparisons}. GARCH-$t$ is supplementary and does not enter the nine-model confidence sets.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

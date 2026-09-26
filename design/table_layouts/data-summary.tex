@@ -1,0 +1,32 @@
+\begin{table}[htbp]
+\centering
+\begin{threeparttable}
+\caption{Descriptive statistics for the daily data}
+\label{tab:data-summary}
+\small
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+Market & Variable & $N$ & Mean & SD & Minimum & Maximum \\
+\midrule
+@@ROW_0@@
+@@ROW_1@@
+@@ROW_2@@
+@@ROW_3@@
+\addlinespace
+@@ROW_4@@
+@@ROW_5@@
+@@ROW_6@@
+@@ROW_7@@
+\addlinespace
+@@ROW_8@@
+@@ROW_9@@
+@@ROW_10@@
+@@ROW_11@@
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item Notes: Return is the daily close-to-close log return in percentage points. $\mathrm{RV}^{OC}$ is five-minute open-to-close realised variance. $\mathrm{RV}^{CC}=r_{ON}^2+\mathrm{RV}^{OC}$ is the close-to-close variance proxy. Both variance measures are shown after multiplication by $10^4$. Asymmetry is the normalised difference between downside and upside realised semivariance and lies in $[-1,1]$. Statistics are computed before the estimation-sample standardisation.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

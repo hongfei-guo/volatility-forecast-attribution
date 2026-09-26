@@ -1,0 +1,39 @@
+seed: 20260730
+markets: [SP500, FTSE100, DAX]
+
+sample:
+  forecast_start: 2018-01-01
+  forecast_end: 2022-02-25
+  estimation_window: expanding
+
+refits:
+  analysis_dates: refit_schedule.csv
+
+models:
+  NN-SV:
+    stan_file: code/models/nn_sv.stan
+  RV-NN-SV:
+    stan_file: code/models/nn_sv.stan
+  RV-RA-NN-SV:
+    stan_file: code/models/rv_ra_nn_sv.stan
+    forecast_availability:
+      unsuccessful_refit: resume_at_next_scheduled_refit
+      filter_requires_earlier_refit: resume_at_next_scheduled_refit
+  SV:
+    stan_file: code/models/sv.stan
+  RV-LIN-SV:
+    stan_file: code/models/rv_lin_sv.stan
+
+state_filter:
+  parameter_atoms: 4000
+  deterministic_grid_level: 4
+  certification_grid_levels: [2, 3, 4]
+  warning_ess_fraction: 0.20
+
+forecast:
+  paths: 4096
+  future_realised_variance:
+    model: log_har
+    prior_variance: 100.0
+    inverse_gamma_shape: 2.0
+    inverse_gamma_scale: 0.1

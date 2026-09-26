@@ -1,0 +1,75 @@
+\begin{table}[htbp]
+\centering
+\caption{Multiscale inputs: one-day mean QLIKE and paired comparisons.
+Lower QLIKE indicates better forecasts.}
+\label{tab:ms-comparisons}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+
+\noindent\textit{Panel A: Neural versus linear correction with multiscale inputs}\par
+\vspace{0.10em}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrrr@{}}
+\toprule
+Market & $N$
+& \shortstack{RV-NN-SV-MS\\QLIKE}
+& \shortstack{RV-LIN-SV-MS\\QLIKE}
+& \shortstack{QLIKE difference\\Neural $-$ linear}
+& \shortstack{Raw DM\\$p$}
+& \shortstack{Holm\\$p$} \\
+\midrule
+@@ROW_0@@
+@@ROW_1@@
+@@ROW_2@@
+\bottomrule
+\end{tabular*}
+
+\vspace{0.45em}
+\noindent\textit{Panel B: Multiscale versus single-lag inputs}\par
+\vspace{0.10em}
+\noindent\textit{Neural correction}\par
+\vspace{0.05em}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrrr@{}}
+\toprule
+Market & $N$
+& \shortstack{RV-NN-SV-MS\\QLIKE}
+& \shortstack{RV-NN-SV\\QLIKE}
+& \shortstack{QLIKE difference\\MS $-$ single lag}
+& \shortstack{Raw DM\\$p$}
+& \shortstack{Holm\\$p$} \\
+\midrule
+@@ROW_3@@
+@@ROW_4@@
+@@ROW_5@@
+\bottomrule
+\end{tabular*}
+
+\vspace{0.35em}
+\noindent\textit{Linear correction}\par
+\vspace{0.05em}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrrrr@{}}
+\toprule
+Market & $N$
+& \shortstack{RV-LIN-SV-MS\\QLIKE}
+& \shortstack{RV-LIN-SV\\QLIKE}
+& \shortstack{QLIKE difference\\MS $-$ single lag}
+& \shortstack{Raw DM\\$p$}
+& \shortstack{Holm\\$p$} \\
+\midrule
+@@ROW_6@@
+@@ROW_7@@
+@@ROW_8@@
+\bottomrule
+\end{tabular*}
+
+\vspace{0.35em}
+\begin{minipage}{\textwidth}
+\scriptsize
+\textit{Notes:} Each comparison uses its own common eligible forecast
+origins after the exchange-calendar gap exclusion; $N$ is the number
+of paired observations. Means across comparison groups may therefore
+refer to different samples. Differences are calculated before rounding.
+DM tests are two-sided, with Newey-West long-run variances and the
+Harvey--Leybourne--Newbold correction. Holm adjustments are applied
+separately to the three tests in Panel A and the six tests in Panel B.
+\end{minipage}
+\end{table}

@@ -1,0 +1,41 @@
+\begin{table}[p]
+\centering
+\begin{threeparttable}
+\caption{Matched comparisons under original and reconstructed evaluation outcomes.}
+\label{tab:ftse-outcome-sensitivity}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llcrrr@{}}
+\toprule
+Comparison & Loss & $\ell$ & $N$ & Original & Reconstructed \\
+\midrule
+\multicolumn{6}{l}{\textit{Panel A: FTSE 100, full evaluation period}} \\
+@@ROW_0@@
+@@ROW_1@@
+@@ROW_2@@
+@@ROW_3@@
+@@ROW_4@@
+@@ROW_5@@
+@@ROW_6@@
+@@ROW_7@@
+@@ROW_8@@
+\addlinespace
+\multicolumn{6}{l}{\textit{Panel B: FTSE 100 information comparison in 2020}} \\
+@@ROW_9@@
+@@ROW_10@@
+@@ROW_11@@
+@@ROW_12@@
+\addlinespace
+\multicolumn{6}{l}{\textit{Panel C: DAX information comparison, full evaluation period}} \\
+@@ROW_13@@
+@@ROW_14@@
+@@ROW_15@@
+@@ROW_16@@
+\bottomrule
+\end{tabular*}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item Notes: Entries are mean loss differences with two-sided descriptive, unadjusted DM $p$-values in brackets. Information is RV-NN-SV minus NN-SV; neural form is RV-NN-SV minus RV-LIN-SV; combination is the criterion-specific combination minus RV-NN-SV. Negative differences favour the first forecast. Both columns use identical forecasts and common eligible origins, retaining the exchange-calendar gap exclusion. Horizons are in trading days; differences are calculated before rounding.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

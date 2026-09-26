@@ -1,0 +1,17 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Hongfei Guo, Juan Miguel Marín and Helena Veiga.
+
+Except where otherwise stated, the original code, documentation, forecast
+outputs, aggregate tables, and figures in this replication package are
+licensed under the Creative Commons Attribution 4.0 International License.
+
+You may share and adapt these materials for any purpose, provided that you
+give appropriate credit, provide a link to the license, and indicate whether
+changes were made.
+
+License text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+This license does not grant rights in the Oxford-Man Realized Library or any
+other third-party data. No third-party source observations are included in
+this package.

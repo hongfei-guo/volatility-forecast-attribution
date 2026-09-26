@@ -1,0 +1,326 @@
+[
+  {
+    "market": "FTSE100",
+    "horizon": 1,
+    "universe": "main_nine",
+    "n": 1036,
+    "winner": "Realized-GARCH-Gaussian-QMLE",
+    "original_retained": [
+      "RV-NN-SV",
+      "HAR-RV",
+      "SHAR-RV",
+      "log-HAR-RV",
+      "Realized-GARCH-Gaussian-QMLE",
+      "NN-ENSEMBLE-EQUAL",
+      "NN-ENSEMBLE-QLIKE"
+    ],
+    "retained": [
+      "RV-NN-SV",
+      "HAR-RV",
+      "SHAR-RV",
+      "log-HAR-RV",
+      "Realized-GARCH-Gaussian-QMLE",
+      "NN-ENSEMBLE-EQUAL",
+      "NN-ENSEMBLE-QLIKE"
+    ],
+    "p_values": [
+      0.00399800099950025,
+      0.025487256371814093,
+      0.1679160419790105
+    ],
+    "means": {
+      "NN-SV": 0.3154869398658642,
+      "RV-NN-SV": 0.30362101774461486,
+      "SV": 0.32348516015153217,
+      "HAR-RV": 0.2784154616843513,
+      "SHAR-RV": 0.2757992667641043,
+      "log-HAR-RV": 0.28595771388003993,
+      "Realized-GARCH-Gaussian-QMLE": 0.27571418086847027,
+      "NN-ENSEMBLE-EQUAL": 0.30621311926959854,
+      "NN-ENSEMBLE-QLIKE": 0.3038131414962807
+    }
+  },
+  {
+    "market": "FTSE100",
+    "horizon": 5,
+    "universe": "main_nine",
+    "n": 1024,
+    "winner": "SHAR-RV",
+    "original_retained": [
+      "RV-NN-SV",
+      "SV",
+      "HAR-RV",
+      "SHAR-RV",
+      "log-HAR-RV",
+      "Realized-GARCH-Gaussian-QMLE",
+      "NN-ENSEMBLE-QLIKE"
+    ],
+    "retained": [
+      "RV-NN-SV",
+      "HAR-RV",
+      "SHAR-RV",
+      "log-HAR-RV",
+      "Realized-GARCH-Gaussian-QMLE",
+      "NN-ENSEMBLE-QLIKE"
+    ],
+    "p_values": [
+      0.010494752623688156,
+      0.06546726636681659,
+      0.06546726636681659,
+      0.1584207896051974
+    ],
+    "means": {
+      "NN-SV": 0.2331098279203689,
+      "RV-NN-SV": 0.22236872047586353,
+      "SV": 0.22752000634348976,
+      "HAR-RV": 0.18827846702740939,
+      "SHAR-RV": 0.18784852146797243,
+      "log-HAR-RV": 0.21277896112224426,
+      "Realized-GARCH-Gaussian-QMLE": 0.19185719387799738,
+      "NN-ENSEMBLE-EQUAL": 0.2269617934452966,
+      "NN-ENSEMBLE-QLIKE": 0.2223687204758635
+    }
+  },
+  {
+    "market": "FTSE100",
+    "horizon": 10,
+    "universe": "main_nine",
+    "n": 1009,
+    "winner": "SHAR-RV",
+    "original_retained": [
+      "RV-NN-SV",
+      "SV",
+      "HAR-RV",
+      "SHAR-RV",
+      "log-HAR-RV",
+      "Realized-GARCH-Gaussian-QMLE",
+      "NN-ENSEMBLE-EQUAL",
+      "NN-ENSEMBLE-QLIKE"
+    ],
+    "retained": [
+      "RV-NN-SV",
+      "HAR-RV",
+      "SHAR-RV",
+      "log-HAR-RV",
+      "Realized-GARCH-Gaussian-QMLE",
+      "NN-ENSEMBLE-QLIKE"
+    ],
+    "p_values": [
+      0.04047976011994003,
+      0.06996501749125437,
+      0.09495252373813093,
+      0.136431784107946
+    ],
+    "means": {
+      "NN-SV": 0.2417021229711143,
+      "RV-NN-SV": 0.23313537763624465,
+      "SV": 0.23478979106195602,
+      "HAR-RV": 0.19709641547768977,
+      "SHAR-RV": 0.19661767158638357,
+      "log-HAR-RV": 0.2432964908582543,
+      "Realized-GARCH-Gaussian-QMLE": 0.20528967641814602,
+      "NN-ENSEMBLE-EQUAL": 0.23685857515288583,
+      "NN-ENSEMBLE-QLIKE": 0.23321831045750063
+    }
+  },
+  {
+    "market": "FTSE100",
+    "horizon": 1,
+    "universe": "expanded_eleven",
+    "n": 1036,
+    "winner": "RV-LIN-SV-HAR",
+    "original_retained": [
+      "HAR-RV",
+      "SHAR-RV",
+      "log-HAR-RV",
+      "Realized-GARCH-Gaussian-QMLE",
+      "RV-LIN-SV-HAR"
+    ],
+    "retained": [
+      "HAR-RV",
+      "SHAR-RV",
+      "log-HAR-RV",
+      "Realized-GARCH-Gaussian-QMLE",
+      "RV-LIN-SV-HAR"
+    ],
+    "p_values": [
+      0.0029985007496251873,
+      0.00399800099950025,
+      0.010494752623688156,
+      0.04997501249375312,
+      0.04997501249375312,
+      0.07896051974012994,
+      0.3963018490754623
+    ],
+    "means": {
+      "NN-SV": 0.3154869398658642,
+      "RV-NN-SV": 0.30362101774461486,
+      "SV": 0.32348516015153217,
+      "HAR-RV": 0.2784154616843513,
+      "SHAR-RV": 0.2757992667641043,
+      "log-HAR-RV": 0.28595771388003993,
+      "Realized-GARCH-Gaussian-QMLE": 0.27571418086847027,
+      "NN-ENSEMBLE-EQUAL": 0.30621311926959854,
+      "NN-ENSEMBLE-QLIKE": 0.3038131414962807,
+      "RV-NN-SV-HAR": 0.298707224024748,
+      "RV-LIN-SV-HAR": 0.2675868092660002
+    }
+  },
+  {
+    "market": "DAX",
+    "horizon": 1,
+    "universe": "main_nine",
+    "n": 1029,
+    "winner": "SHAR-RV",
+    "original_retained": [
+      "HAR-RV",
+      "SHAR-RV",
+      "Realized-GARCH-Gaussian-QMLE"
+    ],
+    "retained": [
+      "HAR-RV",
+      "SHAR-RV",
+      "Realized-GARCH-Gaussian-QMLE"
+    ],
+    "p_values": [
+      0.0009995002498750624,
+      0.0009995002498750624,
+      0.0014992503748125937,
+      0.022488755622188907,
+      0.05847076461769116,
+      0.06846576711644178,
+      0.10444777611194403
+    ],
+    "means": {
+      "NN-SV": 0.38651337937403946,
+      "RV-NN-SV": 0.35801788580379146,
+      "SV": 0.39860600080224695,
+      "HAR-RV": 0.3214424457112663,
+      "SHAR-RV": 0.3080832666566006,
+      "log-HAR-RV": 0.3349707029764332,
+      "Realized-GARCH-Gaussian-QMLE": 0.31945870013640076,
+      "NN-ENSEMBLE-EQUAL": 0.3692578760749737,
+      "NN-ENSEMBLE-QLIKE": 0.35801788580379146
+    }
+  },
+  {
+    "market": "DAX",
+    "horizon": 5,
+    "universe": "main_nine",
+    "n": 1005,
+    "winner": "SHAR-RV",
+    "original_retained": [
+      "HAR-RV",
+      "SHAR-RV",
+      "log-HAR-RV",
+      "Realized-GARCH-Gaussian-QMLE"
+    ],
+    "retained": [
+      "HAR-RV",
+      "SHAR-RV",
+      "log-HAR-RV",
+      "Realized-GARCH-Gaussian-QMLE"
+    ],
+    "p_values": [
+      0.01699150424787606,
+      0.02848575712143928,
+      0.04447776111944028,
+      0.06696651674162919,
+      0.0814592703648176,
+      0.17641179410294852
+    ],
+    "means": {
+      "NN-SV": 0.28675371584228315,
+      "RV-NN-SV": 0.254470447217005,
+      "SV": 0.2833929314343889,
+      "HAR-RV": 0.2048906645797782,
+      "SHAR-RV": 0.1998268651344755,
+      "log-HAR-RV": 0.2374480733254732,
+      "Realized-GARCH-Gaussian-QMLE": 0.22407109546445567,
+      "NN-ENSEMBLE-EQUAL": 0.26890130628011033,
+      "NN-ENSEMBLE-QLIKE": 0.254470447217005
+    }
+  },
+  {
+    "market": "DAX",
+    "horizon": 10,
+    "universe": "main_nine",
+    "n": 975,
+    "winner": "HAR-RV",
+    "original_retained": [
+      "RV-NN-SV",
+      "HAR-RV",
+      "SHAR-RV",
+      "log-HAR-RV",
+      "Realized-GARCH-Gaussian-QMLE",
+      "NN-ENSEMBLE-QLIKE"
+    ],
+    "retained": [
+      "RV-NN-SV",
+      "HAR-RV",
+      "SHAR-RV",
+      "log-HAR-RV",
+      "Realized-GARCH-Gaussian-QMLE",
+      "NN-ENSEMBLE-QLIKE"
+    ],
+    "p_values": [
+      0.031984007996002,
+      0.03548225887056472,
+      0.095952023988006,
+      0.11944027986006997
+    ],
+    "means": {
+      "NN-SV": 0.30151832887654684,
+      "RV-NN-SV": 0.27764613110018205,
+      "SV": 0.2965154456523279,
+      "HAR-RV": 0.2207195084773391,
+      "SHAR-RV": 0.22799108408970742,
+      "log-HAR-RV": 0.3006152213594446,
+      "Realized-GARCH-Gaussian-QMLE": 0.27958657565165973,
+      "NN-ENSEMBLE-EQUAL": 0.2883244287021609,
+      "NN-ENSEMBLE-QLIKE": 0.27764613110018205
+    }
+  },
+  {
+    "market": "DAX",
+    "horizon": 1,
+    "universe": "expanded_eleven",
+    "n": 1029,
+    "winner": "SHAR-RV",
+    "original_retained": [
+      "HAR-RV",
+      "SHAR-RV",
+      "Realized-GARCH-Gaussian-QMLE",
+      "RV-LIN-SV-HAR"
+    ],
+    "retained": [
+      "HAR-RV",
+      "SHAR-RV",
+      "Realized-GARCH-Gaussian-QMLE",
+      "RV-LIN-SV-HAR"
+    ],
+    "p_values": [
+      0.0009995002498750624,
+      0.0014992503748125937,
+      0.0029985007496251873,
+      0.02948525737131434,
+      0.03298350824587706,
+      0.03298350824587706,
+      0.03548225887056472,
+      0.21139430284857572
+    ],
+    "means": {
+      "NN-SV": 0.38651337937403946,
+      "RV-NN-SV": 0.35801788580379146,
+      "SV": 0.39860600080224695,
+      "HAR-RV": 0.3214424457112663,
+      "SHAR-RV": 0.3080832666566006,
+      "log-HAR-RV": 0.3349707029764332,
+      "Realized-GARCH-Gaussian-QMLE": 0.31945870013640076,
+      "NN-ENSEMBLE-EQUAL": 0.3692578760749737,
+      "NN-ENSEMBLE-QLIKE": 0.35801788580379146,
+      "RV-NN-SV-HAR": 0.3398477001854502,
+      "RV-LIN-SV-HAR": 0.31257641347729137
+    }
+  }
+]

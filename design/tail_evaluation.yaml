@@ -1,0 +1,42 @@
+horizon: 1
+evaluation_sample_policy: main_gap_excluded
+risk_levels: [0.01, 0.05]
+probabilistic_models:
+  NN-SV: variance_standardized_student_t_mixture
+  RV-NN-SV: variance_standardized_student_t_mixture
+  SV: variance_standardized_student_t_mixture
+  RV-LIN-SV: variance_standardized_student_t_mixture
+  RV-RA-NN-SV: variance_standardized_student_t_mixture
+  NN-ENSEMBLE-EQUAL: variance_standardized_student_t_mixture
+  NN-ENSEMBLE-LOG_SCORE: variance_standardized_student_t_mixture
+  Realized-GARCH-Gaussian-QMLE: gaussian_mixture
+  Realized-GARCH-t-MLE: variance_standardized_student_t_mixture
+main_table_models:
+  - RV-NN-SV
+  - Realized-GARCH-Gaussian-QMLE
+  - Realized-GARCH-t-MLE
+fixed_dm_pairs:
+  - model_a: RV-NN-SV
+    model_b: NN-SV
+    role: realised_information_contrast
+  - model_a: RV-NN-SV
+    model_b: RV-LIN-SV
+    role: h1_functional_form_contrast
+  - model_a: RV-RA-NN-SV
+    model_b: RV-NN-SV
+    role: residual_asymmetry_contrast
+  - model_a: NN-ENSEMBLE-EQUAL
+    model_b: RV-NN-SV
+    role: equal_weight_combination_contrast
+  - model_a: NN-ENSEMBLE-LOG_SCORE
+    model_b: RV-NN-SV
+    role: log_score_combination_contrast
+  - model_a: RV-NN-SV
+    model_b: Realized-GARCH-Gaussian-QMLE
+    role: neural_vs_gaussian_realized_garch
+  - model_a: Realized-GARCH-t-MLE
+    model_b: Realized-GARCH-Gaussian-QMLE
+    role: return_innovation_distribution_contrast
+  - model_a: Realized-GARCH-t-MLE
+    model_b: RV-NN-SV
+    role: tail_matched_structured_benchmark_contrast

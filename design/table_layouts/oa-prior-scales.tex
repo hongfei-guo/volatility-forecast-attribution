@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\caption{Prior scales for the observable correction functions.}
+\label{tab:oa-prior-scales}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+Market & NN-SV & RV-NN-SV & RV-LIN-SV \\
+\midrule
+@@ROW_0@@
+@@ROW_1@@
+@@ROW_2@@
+\bottomrule
+\end{tabular}
+\par\medskip
+\begin{minipage}{0.90\textwidth}
+\footnotesize
+\textit{Notes:} The NN-SV and RV-NN-SV entries are the values of $s_{m,k}^{\mathrm{NN}}$ in the output-weight prior. The RV-LIN-SV entries are the values of $s_m^{\mathrm{LIN}}$ in the coefficient prior. RV-RA-NN-SV uses the RV-NN-SV scale for its neural core. Each scale targets a prior median empirical standard deviation of $0.10$ for the centred correction on the corresponding fixed reference inputs.
+\end{minipage}
+\end{table}

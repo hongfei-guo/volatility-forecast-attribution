@@ -1,0 +1,75 @@
+{
+  "market": "DAX",
+  "horizon": 1,
+  "n_common": 1029,
+  "alpha": 0.1,
+  "bootstrap_replications": 2000,
+  "mean_block_length": 10,
+  "seed": 20260730,
+  "statistic": "T_R",
+  "universe": [
+    "NN-SV",
+    "RV-NN-SV",
+    "SV",
+    "HAR-RV",
+    "SHAR-RV",
+    "log-HAR-RV",
+    "Realized-GARCH-Gaussian-QMLE",
+    "NN-ENSEMBLE-EQUAL",
+    "NN-ENSEMBLE-QLIKE",
+    "RV-NN-SV-HAR",
+    "RV-LIN-SV-HAR"
+  ],
+  "retained": [
+    "HAR-RV",
+    "SHAR-RV",
+    "Realized-GARCH-Gaussian-QMLE",
+    "RV-LIN-SV-HAR"
+  ],
+  "elimination_order": [
+    "NN-SV",
+    "SV",
+    "NN-ENSEMBLE-EQUAL",
+    "log-HAR-RV",
+    "RV-NN-SV",
+    "NN-ENSEMBLE-QLIKE",
+    "RV-NN-SV-HAR"
+  ],
+  "sequential_p_values": [
+    0.0009995002498750624,
+    0.0014992503748125937,
+    0.0029985007496251873,
+    0.02948525737131434,
+    0.03298350824587706,
+    0.03298350824587706,
+    0.03548225887056472,
+    0.21139430284857572
+  ],
+  "mean_qlike": {
+    "NN-SV": 0.3865862068446675,
+    "RV-NN-SV": 0.3580884413396097,
+    "SV": 0.39868192196023905,
+    "HAR-RV": 0.32150051715399036,
+    "SHAR-RV": 0.3081324420385919,
+    "log-HAR-RV": 0.3350088533114464,
+    "Realized-GARCH-Gaussian-QMLE": 0.3194954805036512,
+    "NN-ENSEMBLE-EQUAL": 0.3693298752869466,
+    "NN-ENSEMBLE-QLIKE": 0.3580884413396097,
+    "RV-NN-SV-HAR": 0.3399143073503778,
+    "RV-LIN-SV-HAR": 0.3126279921606254
+  },
+  "rank": {
+    "NN-SV": 10,
+    "RV-NN-SV": 7,
+    "SV": 11,
+    "HAR-RV": 4,
+    "SHAR-RV": 1,
+    "log-HAR-RV": 5,
+    "Realized-GARCH-Gaussian-QMLE": 3,
+    "NN-ENSEMBLE-EQUAL": 9,
+    "NN-ENSEMBLE-QLIKE": 7,
+    "RV-NN-SV-HAR": 6,
+    "RV-LIN-SV-HAR": 2
+  },
+  "role": "post-main-analysis expanded set; original nine-model MCS unchanged"
+}

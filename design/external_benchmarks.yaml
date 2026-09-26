@@ -1,0 +1,22 @@
+seed: 20260730
+markets: [SP500, FTSE100, DAX]
+horizons: [1, 5, 10]
+
+sample:
+  forecast_start: 2018-01-01
+  forecast_end: 2022-02-25
+
+refits:
+  analysis_dates: refit_schedule.csv
+
+models:
+  Realized-GARCH-Gaussian-QMLE:
+    optimizer_maxiter: 2000
+
+forecast:
+  paths: 4096
+  gaussian_predictive_components:
+    - raw_returns
+    - raw_variances
+    - raw_return_locations
+    - raw_conditional_sds

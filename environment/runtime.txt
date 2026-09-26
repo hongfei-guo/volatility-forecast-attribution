@@ -1,0 +1,3 @@
+Python 3.10.5
+CmdStan 2.36.0
+macOS 26.6.2, arm64

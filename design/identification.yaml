@@ -1,0 +1,101 @@
+model:
+  id: NN-SV
+  stan_file: code/models/nn_sv.stan
+  information_set: signed_return_lag_1
+  link: exponential
+  width: 5
+  prior:
+    latent_mean: 0.0
+    latent_sd: 1.0
+    persistence_median: 0.98
+    persistence_logit_sd: 1.0
+    sigma_h_sd: 0.9901178450473134
+    initial_state_sd: 1.5
+    nu_minus_two_log_mean: 1.791759469228055
+    nu_minus_two_log_sd: 0.7
+    first_layer_sd: 1.0
+    hidden_bias_sd: 0.2
+    output_base_scale: 0.2964544809008027
+    output_log_sd: 0.2
+
+dgp:
+  ids: [DGP-N, DGP-0]
+  anchor:
+    aggregation: median_across_12_monthly_2017_fits
+    mu: -0.59351125
+    phi: 0.9883567500000001
+    sigma_h: 1.0268899999999999
+    sigma_eta: 0.1562457416833446
+    nu: 12.8628
+    target_correction_share: 0.0173436231772
+  sample:
+    estimation_rows: 4266
+    forecast_rows: 10
+    burn_in: 1180
+    burn_in_residual_tolerance: 1.0e-6
+  reference_curve:
+    file: data/identification_reference_curve.npz
+    sha256: cb681fc28bbab54529a8b152607c70dacd8fc661926d25a7e12809dfe093ada8
+    construction: pointwise_median_of_monthly_posterior_mean_natural_splines
+    extrapolation: endpoint_tangent
+    centering: subtract_grid_mean
+  amplitude_calibration_replications: 150
+
+replications:
+  per_dgp: 200
+  common_random_numbers_between_dgps: true
+  independent_random_streams: true
+
+mcmc:
+  chains: 4
+  thresholds:
+    divergences_max: 0
+    rhat_max: 1.01
+    bulk_ess_min: 400
+    tail_ess_min: 400
+    bfmi_min: 0.30
+    treedepth_saturation_max_fraction: 0.001
+    mcse_over_sd_max: 0.05
+  sampling_sequence:
+    - adapt_delta: 0.95
+      max_treedepth: 12
+      warmup: 1000
+      sampling: 2000
+    - adapt_delta: 0.95
+      max_treedepth: 12
+      warmup: 1000
+      sampling: 4000
+    - adapt_delta: 0.97
+      max_treedepth: 12
+      warmup: 1000
+      sampling: 2000
+    - adapt_delta: 0.97
+      max_treedepth: 12
+      warmup: 1000
+      sampling: 4000
+  sampling_adjustments:
+    effective_sample_size_only: increase_sampling_at_same_adapt_delta
+    sparse_divergences_within_rate_limits: increase_adapt_delta
+    other_diagnostic_failure: unsuccessful_fit
+    sparse_divergence_max_total_fraction: 0.001
+    sparse_divergence_max_per_chain_fraction: 0.002
+    reference_post_warmup_draws_per_chain: 2000
+    adapt_delta_ceiling: 0.97
+
+prediction:
+  paths: 4096
+  horizons: [1, 5, 10]
+
+reporting:
+  interval_level: 0.95
+  material_correction_probability: 0.95
+  coverage_rejection_at_or_below: 184
+  false_declaration_rejection_at_or_above: 16
+  unsuccessful_fit_coverage: uncovered
+  unsuccessful_fit_material_declaration: non_declaration
+  continuous_metrics: conditional_on_successful_fits
+  logistic_curve:
+    estimator: ordinary_logistic
+    covariance: HC1_sandwich
+    unsuccessful_fit_outcome: zero
+    omission_rule: no_replacement

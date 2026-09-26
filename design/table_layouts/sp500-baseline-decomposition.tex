@@ -1,0 +1,38 @@
+\begin{table}[p]
+\centering
+\begin{threeparttable}
+\caption{Baseline and correction components of the five S\&P 500 forecasts.}
+\label{tab:sp500-baseline-decomposition}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrr@{}}
+\toprule
+Origin & Model & $B\times10^4$ & $A$ & $\widehat V_{t,1}\times10^4$ \\
+\midrule
+@@ROW_0@@
+@@ROW_1@@
+@@ROW_2@@
+\addlinespace
+@@ROW_3@@
+@@ROW_4@@
+@@ROW_5@@
+\addlinespace
+@@ROW_6@@
+@@ROW_7@@
+@@ROW_8@@
+\addlinespace
+@@ROW_9@@
+@@ROW_10@@
+@@ROW_11@@
+\addlinespace
+@@ROW_12@@
+@@ROW_13@@
+@@ROW_14@@
+\bottomrule
+\end{tabular*}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item Notes: All origins are in 2020. Components are calculated from the original predictive draws and corresponding posterior parameters. The identity $\widehat V_{t,1}=BA$ holds before rounding. Baseline and correction parameters are jointly estimated, so this decomposition does not identify the causal effect of either component.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

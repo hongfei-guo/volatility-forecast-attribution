@@ -1,0 +1,10 @@
+estimand,estimate,ci_lower,ci_upper,origin_count,status,high_state_count,low_state_count,varying_refit_count,interval
+beta_asymmetry,-0.008460072273471252,-0.02560229909442644,0.004674125474227912,241,estimated,,,,paired circular moving-block percentile
+beta_log_rv,-0.0031836870145552244,-0.011449106015933797,0.008506733242979113,241,estimated,,,,paired circular moving-block percentile
+beta_interaction,-0.0059200994553359155,-0.015595466442442484,0.001239572971435167,241,estimated,,,,paired circular moving-block percentile
+high_asymmetry,-0.002568595153645945,-0.009254917282458601,0.0056234835914774906,241,estimated,49.0,192.0,11.0,paired circular moving-block percentile
+high_log_rv,,,,241,not_estimable_no_within_refit_high_state_variation,0.0,241.0,0.0,not_computed
+predicted_minus_realized_asymmetry,-4.9446958093313094e-05,-0.0005475294441983661,0.00045490096588844225,241,estimated,,,,paired circular moving-block percentile
+predicted_minus_no_asymmetry_term,5.517090911491632e-05,-1.349129430928807e-05,0.00012646041257950374,241,estimated,,,,paired circular moving-block percentile
+realized_minus_no_asymmetry_term,0.00010461786720822941,-0.00040715509920637687,0.0006379390429452082,241,estimated,,,,paired circular moving-block percentile
+equal_weight_three_minus_two,-0.005708744145053036,-0.008356859488256076,-0.0031336803781473097,241,estimated,,,,paired circular moving-block percentile

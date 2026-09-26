@@ -1,0 +1,39 @@
+{
+  "source_relative_path": "raw/external/omi/oxfordmanrealizedvolatilityindices.csv",
+  "source_sha256": "94ba808f56301d2d463e3b111fdcce469808f098350a4281c09584457957f8aa",
+  "source_date_rule": "First 10 characters of vendor session label; no UTC date relabeling",
+  "calendar_version": "4.13.2",
+  "hf_timestamp": "America/New_York, bar start",
+  "hf_rv_rule": "first regular-bar open plus consecutive regular-bar closes, complete calendar grid only, excluding post-close auction bars",
+  "source_files": [
+    {
+      "market": "SP500",
+      "relative_file": "raw/hf/firstrate/SPX_full_5min.txt",
+      "bytes": 19106988,
+      "sha256": "fc217cdc2856073c8cd88bc5209d8b8131c793370182e984042ac728b753507e",
+      "first_day": "2008-01-02",
+      "last_day": "2026-03-02"
+    },
+    {
+      "market": "FTSE100",
+      "relative_file": "raw/hf/firstrate/UKX_full_5min.txt",
+      "bytes": 11828787,
+      "sha256": "8f779f6d77715f132ce6f00352219168460e3f24703227f707efdd44ba752a34",
+      "first_day": "2015-12-10",
+      "last_day": "2024-08-09"
+    },
+    {
+      "market": "DAX",
+      "relative_file": "raw/hf/firstrate/DAX_full_5min.txt",
+      "bytes": 24505327,
+      "sha256": "259829a91be49218ac2fbb10d9f6e6680212e378138da7bfd2756650e4dd8e1e",
+      "first_day": "2008-01-02",
+      "last_day": "2024-08-09"
+    }
+  ],
+  "library_version": "0.3",
+  "source_archive_url": "https://web.archive.org/web/20220301022212id_/https://realized.oxford-man.ox.ac.uk/images/oxfordmanrealizedvolatilityindices.zip",
+  "source_archive_sha256": "f620ad530e35e4e28c667cfd53a9b68e8cac42133bdf3e734614fffc58f87be1",
+  "research_use_terms_url": "https://web.archive.org/web/20211205161411id_/https://realized.oxford-man.ox.ac.uk/terms-and-conditions",
+  "required_citation": "Heber, Gerd, Asger Lunde, Neil Shephard and Kevin K. Sheppard (2009), Oxford-Man Institute's realized library, Oxford-Man Institute, University of Oxford, Version 0.3."
+}

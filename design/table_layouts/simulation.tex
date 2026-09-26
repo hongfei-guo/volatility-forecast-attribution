@@ -1,0 +1,59 @@
+\begin{table}[!htbp]
+\centering
+\begin{threeparttable}
+\caption{Simulation results: recovery of the two parts of the log variance and declarations of a material correction.}
+\label{tab:simulation}
+\footnotesize
+\renewcommand{\arraystretch}{1}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.56\textwidth}>{\centering\arraybackslash}p{0.13\textwidth}>{\centering\arraybackslash}p{0.13\textwidth}@{}}
+\toprule
+Quantity & DGP-N & DGP-0 \\
+\midrule
+@@ROW_0@@
+\addlinespace[2pt]
+\multicolumn{3}{@{}l}{\textit{Persistence of the baseline, $\phi$}} \\
+@@ROW_1@@
+@@ROW_2@@
+@@ROW_3@@
+\addlinespace[2pt]
+\multicolumn{3}{@{}l}{\textit{Correction function}} \\
+@@ROW_4@@
+@@ROW_5@@
+\addlinespace[2pt]
+\multicolumn{3}{@{}l}{\textit{One-day variance forecast}} \\
+@@ROW_6@@
+@@ROW_7@@
+\bottomrule
+\end{tabular}
+\end{threeparttable}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\begin{threeparttable}
+\ContinuedFloat
+\caption[]{Simulation results: recovery of the two parts of the log variance and declarations of a material correction (continued).}
+\footnotesize
+\renewcommand{\arraystretch}{1}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.56\textwidth}>{\centering\arraybackslash}p{0.13\textwidth}>{\centering\arraybackslash}p{0.13\textwidth}@{}}
+\toprule
+Quantity & DGP-N & DGP-0 \\
+\midrule
+\multicolumn{3}{@{}l}{\textit{Correction index}} \\
+@@ROW_8@@
+@@ROW_9@@
+@@ROW_10@@
+@@ROW_11@@
+@@ROW_12@@
+\addlinespace[2pt]
+\multicolumn{3}{@{}l}{\textit{Declarations of a material correction}} \\
+@@ROW_13@@
+@@ROW_14@@
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\scriptsize
+\item Notes: DGP-N contains the smooth correction calibrated to the data, and DGP-0 sets the correction to zero. RMSE is the root mean squared error, nRMSE is the normalised RMSE of the correction function, MCMC is Markov chain Monte Carlo, and n.a.\ means not applicable. Bias, RMSE, nRMSE, posterior medians, and posterior probabilities use the fits that pass the MCMC diagnostics. Coverage and declaration rates use all 200 replications, and the two DGP-N fits that fail count as not covering and as no declaration. The RMSE of the variance forecast is on the variance scale of the standardised returns. The rows on the correction index are added after the main simulation results and use the stored posterior draws. Under DGP-0 the true index is zero, so the nRMSE and the coverage of the index interval are not applicable.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

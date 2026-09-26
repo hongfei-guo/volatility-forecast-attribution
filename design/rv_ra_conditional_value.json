@@ -1,0 +1,71 @@
+{
+  "market": "SP500",
+  "role": "descriptive_2017_comparison",
+  "sample": {
+    "origin_count": 241,
+    "origin_start": "2017-01-03",
+    "origin_end": "2017-12-14",
+    "last_target_date": "2017-12-29",
+    "evaluation_start": "2018-01-01",
+    "horizons": [1, 5, 10],
+    "counterfactual_horizons": [5, 10]
+  },
+  "primary_outcome": {
+    "name": "equal_horizon_normalized_rv_ra_minus_rv_qlike",
+    "negative_favors": "RV-RA-NN-SV"
+  },
+  "conditional_regression": {
+    "monthly_reestimation_date_fixed_effects": true,
+    "covariates": [
+      "q_centered",
+      "standardized_log_rv",
+      "interaction"
+    ],
+    "regime_percentile": 0.75,
+    "regimes": [
+      "high_asymmetry",
+      "high_log_rv"
+    ],
+    "unsupported_regime_reporting": "unavailable_with_support_counts"
+  },
+  "bootstrap": {
+    "method": "circular_moving_block",
+    "block_length": 10,
+    "replications": 2000,
+    "seed": 20260730,
+    "interval_percentiles": [2.5, 97.5]
+  },
+  "counterfactual_comparisons": {
+    "modes": [
+      "predicted_asymmetry",
+      "realized_asymmetry",
+      "no_asymmetry_term"
+    ],
+    "contrasts": [
+      "predicted_minus_realized_asymmetry",
+      "predicted_minus_no_asymmetry_term",
+      "realized_minus_no_asymmetry_term"
+    ],
+    "contrast_aggregation": "equal_horizon_mean_of_within_horizon_mean_paired_qlike_differences"
+  },
+  "equal_weight_comparison": {
+    "two_member_models": [
+      "NN-SV",
+      "RV-NN-SV"
+    ],
+    "three_member_models": [
+      "NN-SV",
+      "RV-NN-SV",
+      "RV-RA-NN-SV"
+    ],
+    "weights_estimated": false,
+    "contrast": "three_member_minus_two_member",
+    "contrast_aggregation": "equal_horizon_mean_of_within_horizon_mean_paired_qlike_differences"
+  },
+  "output": {
+    "table": "estimates.csv",
+    "figure": "figure.png",
+    "monthly_panel": "monthly_panel.csv",
+    "summary": "summary.json"
+  }
+}

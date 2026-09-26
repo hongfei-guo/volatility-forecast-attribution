@@ -1,0 +1,31 @@
+\begin{table}[htbp]
+\centering
+\caption{Mean QLIKE and 90\% model confidence sets.}
+\label{tab:primary-qlike-mcs}
+\small
+\setlength{\tabcolsep}{2.5pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrrrrrrrr@{}}
+\toprule
+& \multicolumn{3}{c}{S\&P~500} & \multicolumn{3}{c}{FTSE~100} & \multicolumn{3}{c}{DAX} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+Model & $\ell=1$ & $\ell=5$ & $\ell=10$ & $\ell=1$ & $\ell=5$ & $\ell=10$ & $\ell=1$ & $\ell=5$ & $\ell=10$ \\
+\midrule
+@@ROW_0@@
+@@ROW_1@@
+@@ROW_2@@
+@@ROW_3@@
+@@ROW_4@@
+@@ROW_5@@
+@@ROW_6@@
+@@ROW_7@@
+@@ROW_8@@
+\bottomrule
+\end{tabular}%
+}
+\vspace{0.5em}
+\begin{minipage}{\textwidth}
+\footnotesize
+Notes: Bold entries belong to the cell's 90\% model confidence set; underlined entries are the lowest mean QLIKE in the cell. The confidence sets use the studentised $T_R$ range statistic, the $e_R$ elimination rule, 2{,}000 stationary-bootstrap replications, and mean block length 10. Common-sample sizes, in the order displayed, are 1012, 965, 910, 1036, 1024, 1009, 1029, 1005, and 975. Realized GARCH is the Gaussian-QMLE specification.
+\end{minipage}
+\end{table}

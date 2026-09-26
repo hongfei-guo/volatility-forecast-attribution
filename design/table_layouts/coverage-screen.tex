@@ -1,0 +1,54 @@
+\begin{table}[p]
+\centering
+\begin{threeparttable}
+\caption{Common intraday-coverage screens and reconstructed sessions.}
+\label{tab:coverage-screen}
+\scriptsize
+\renewcommand{\arraystretch}{0.95}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrr@{}}
+\multicolumn{5}{l}{\textit{Panel A: Evaluation-period screening counts}} \\
+\toprule
+Market & Source dates & Span flags & Count flags & Either flag \\
+\midrule
+@@ROW_0@@
+@@ROW_1@@
+@@ROW_2@@
+\bottomrule
+\end{tabular*}
+\vspace{0.4em}
+\noindent\textit{Panel B: All flagged evaluation-period dates}\par
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrr@{}}
+\toprule
+Market & Date & Span (\%) & Observations & Count ratio & Five-minute bars \\
+\midrule
+@@ROW_3@@
+@@ROW_4@@
+@@ROW_5@@
+@@ROW_6@@
+@@ROW_7@@
+@@ROW_8@@
+@@ROW_9@@
+@@ROW_10@@
+@@ROW_11@@
+@@ROW_12@@
+@@ROW_13@@
+@@ROW_14@@
+@@ROW_15@@
+@@ROW_16@@
+@@ROW_17@@
+@@ROW_18@@
+@@ROW_19@@
+@@ROW_20@@
+@@ROW_21@@
+@@ROW_22@@
+@@ROW_23@@
+@@ROW_24@@
+\bottomrule
+\end{tabular*}
+\begin{tablenotes}[flushleft]
+\scriptsize
+\item Notes: Source dates cover January 2018--February 2022 and need not equal paired forecast-sample sizes. Span is the recorded first-to-last duration divided by the scheduled session length. The count ratio is observations per expected trading hour divided by its market-year median over available source dates. The thresholds are 95\% and 0.50, respectively. Scheduled half-days use their shorter expected duration. Five-minute bars refer to the complete independent FirstRate grid used for reconstruction, not to the OMI observation count. Span values above 100\% can include observations beyond the continuous session.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

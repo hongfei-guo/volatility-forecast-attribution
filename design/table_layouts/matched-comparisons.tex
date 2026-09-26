@@ -1,0 +1,31 @@
+\begin{table}[htbp]
+\centering
+\begin{threeparttable}
+\caption{Matched comparisons of information, functional form, and forecast combination.}
+\label{tab:matched-comparisons}
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Comparison & Horizon & S\&P~500 & FTSE~100 & DAX \\
+\midrule
+\multicolumn{5}{l}{\textit{Panel A: Mean QLIKE differences}} \\
+@@ROW_0@@
+@@ROW_1@@
+@@ROW_2@@
+@@ROW_3@@
+@@ROW_4@@
+@@ROW_5@@
+@@ROW_6@@
+\addlinespace
+\multicolumn{5}{l}{\textit{Panel B: Mean negative log score differences}} \\
+@@ROW_7@@
+@@ROW_8@@
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item Notes: Entries are mean loss differences, with two-sided DM $p$-values in brackets; the tests are descriptive and unadjusted for multiplicity. Realised information is RV-NN-SV minus NN-SV; neural form is RV-NN-SV minus RV-LIN-SV; each combination is the corresponding ensemble minus RV-NN-SV. Negative differences favour the first model. QLIKE common-sample sizes for $\ell=(1,5,10)$ are $(1012,965,910)$ for the S\&P~500, $(1036,1024,1009)$ for the FTSE~100, and $(1029,1005,975)$ for the DAX. Neural-form sample sizes are 921, 994, and 1012. The one-day negative log score samples match the one-day QLIKE samples.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

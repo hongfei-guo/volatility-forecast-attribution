@@ -1,0 +1,20 @@
+markets: [SP500, FTSE100, DAX]
+horizons: [1, 5, 10]
+candidate_models: [NN-SV, RV-NN-SV]
+seed: 20260730
+
+sample:
+  objective_start: 2017-01-01
+  forecast_start: 2018-01-01
+  forecast_end: 2022-02-25
+
+weighting:
+  half_life_sessions: 252
+  update_frequency: calendar_month
+  evaluation_sample_policy: main_gap_excluded
+  eligibility_column: main_evaluation_eligible
+  availability_column: available
+  modes:
+    equal: [1, 5, 10]
+    qlike: [1, 5, 10]
+    log_score: [1]

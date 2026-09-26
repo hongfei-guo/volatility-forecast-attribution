@@ -1,0 +1,26 @@
+\begin{table}[htbp]
+\centering
+\begin{threeparttable}
+\caption{Mean loss differences in the 2020 realised-information comparison.}
+\label{tab:subsample-scores}
+\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrr@{}}
+\toprule
+Loss & Horizon & S\&P~500 & FTSE~100 & DAX \\
+\midrule
+@@ROW_0@@
+@@ROW_1@@
+@@ROW_2@@
+@@ROW_3@@
+@@ROW_4@@
+@@ROW_5@@
+@@ROW_6@@
+\bottomrule
+\end{tabular*}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item Notes: Entries are mean losses for RV-NN-SV minus NN-SV, evaluated against the original Oxford--Man outcomes. Negative differences favour realised information. Brackets contain two-sided descriptive DM $p$-values, unadjusted for multiplicity. CRPS differences on the decimal-return scale are multiplied by $10^4$. Forecasts are assigned to 2020 by their origin dates. At horizons $(1,5,10)$, paired sample sizes are $(243,224,199)$ for the S\&P~500 and $(250,242,232)$ for both the FTSE~100 and DAX. All scores at a given market and horizon use the same paired sample.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

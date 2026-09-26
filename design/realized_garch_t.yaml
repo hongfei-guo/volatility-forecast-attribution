@@ -1,0 +1,23 @@
+model:
+  model_id: Realized-GARCH-t-MLE
+  estimator: joint_mle_fixed_three_starts
+  measurement_variable: rv_oc
+  return_innovation: variance_standardized_student_t
+  measurement_innovation: gaussian
+  parameter_uncertainty_propagated: false
+  optimizer: L-BFGS-B
+  optimizer_maxiter: 2000
+  optimizer_selection_rule: lowest_finite_objective_among_successful_fixed_starts
+  refit_schedule: refit_schedule.csv
+  schedule_basis: Gaussian Realized GARCH re-estimation dates
+  estimation_window: expanding
+  comparison_dates: gaussian_realized_garch_available_dates
+  refit_failure_rule: forecasts_unavailable_until_next_scheduled_refit
+markets: [SP500, FTSE100, DAX]
+horizons: [1]
+sample:
+  forecast_start: 2018-01-01
+  forecast_end: 2022-02-25
+  origin_alignment_horizon: 10
+forecast_draws: 4096
+seed: 20260730

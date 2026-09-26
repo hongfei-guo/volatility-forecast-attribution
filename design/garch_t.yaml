@@ -1,0 +1,26 @@
+model_id: GARCH-t
+display_name: GARCH(1,1)-t
+purpose: return_innovation_distribution_comparison
+markets: [SP500, FTSE100, DAX]
+horizons: [1, 5, 10]
+return_distribution: variance_standardized_student_t
+estimator: fixed_four_start_mle
+parameter_uncertainty_propagated: false
+optimizer: L-BFGS-B
+optimizer_maxiter: 2000
+optimizer_acceptance:
+  minimum_near_optimal_starts: 2
+  absolute_objective_tolerance: 1.0e-4
+  relative_objective_tolerance: 1.0e-8
+variance_mean_method: analytic_garch_11_t
+refit_schedule: refit_schedule.csv
+schedule_basis: shared NN-SV and RV-NN-SV re-estimation dates
+estimation_window: expanding
+comparison_dates: NN-SV_available_dates
+refit_failure_rule: forecasts_unavailable_until_next_scheduled_refit
+sample:
+  forecast_start: 2018-01-01
+  forecast_end: 2022-02-25
+  origin_alignment_horizon: 10
+seed: 20260730
+forward_paths: 4096

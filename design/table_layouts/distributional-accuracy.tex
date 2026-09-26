@@ -1,0 +1,34 @@
+\begin{table}[htbp]
+\centering
+\begin{threeparttable}
+\caption{Selected distributional-accuracy comparisons.}
+\label{tab:distributional-accuracy}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Model or comparison & Horizon or score & S\&P~500 & FTSE~100 & DAX \\
+\midrule
+\multicolumn{5}{l}{\textit{Panel A: Mean CRPS}} \\
+@@ROW_0@@
+@@ROW_1@@
+@@ROW_2@@
+@@ROW_3@@
+@@ROW_4@@
+@@ROW_5@@
+@@ROW_6@@
+@@ROW_7@@
+@@ROW_8@@
+\addlinespace
+\multicolumn{5}{l}{\textit{Panel B: RG ($t$) minus RG (G), mean loss differences}} \\
+@@ROW_9@@
+@@ROW_10@@
+@@ROW_11@@
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]
+\footnotesize
+\item Notes: Lower values indicate better forecasts. CRPS is reported on the raw decimal-return scale. Panel B gives two-sided descriptive DM $p$-values in brackets; negative differences favour Student-$t$ Realized GARCH. The NN-SV and RV-NN-SV samples contain $(1012,965,910)$ S\&P~500, $(1036,1024,1009)$ FTSE~100, and $(1029,1005,975)$ DAX observations at horizons $(1,5,10)$. RV-LIN-SV has 930, 1003, and 1021 one-day observations. Both Realized GARCH variants use 1012, 1036, and 1029 one-day observations.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

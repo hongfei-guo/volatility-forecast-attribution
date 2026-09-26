@@ -1,0 +1,19 @@
+{
+  "counterfactual_horizons": [
+    5,
+    10
+  ],
+  "description": "Descriptive RV-RA conditional-value results for 2017",
+  "last_target_date": "2017-12-29",
+  "non_estimable_estimands": [
+    "high_log_rv"
+  ],
+  "origin_count": 241,
+  "origin_end": "2017-12-14",
+  "origin_start": "2017-01-03",
+  "outputs": [
+    "estimates.csv",
+    "monthly_panel.csv",
+    "figure.png"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "market": "FTSE100",
+  "horizon": 1,
+  "n_common": 1036,
+  "alpha": 0.1,
+  "bootstrap_replications": 2000,
+  "mean_block_length": 10,
+  "seed": 20260730,
+  "statistic": "T_R",
+  "universe": [
+    "NN-SV",
+    "RV-NN-SV",
+    "SV",
+    "HAR-RV",
+    "SHAR-RV",
+    "log-HAR-RV",
+    "Realized-GARCH-Gaussian-QMLE",
+    "NN-ENSEMBLE-EQUAL",
+    "NN-ENSEMBLE-QLIKE",
+    "RV-NN-SV-HAR",
+    "RV-LIN-SV-HAR"
+  ],
+  "retained": [
+    "HAR-RV",
+    "SHAR-RV",
+    "log-HAR-RV",
+    "Realized-GARCH-Gaussian-QMLE",
+    "RV-LIN-SV-HAR"
+  ],
+  "elimination_order": [
+    "SV",
+    "NN-SV",
+    "NN-ENSEMBLE-EQUAL",
+    "RV-NN-SV",
+    "NN-ENSEMBLE-QLIKE",
+    "RV-NN-SV-HAR"
+  ],
+  "sequential_p_values": [
+    0.005997001499250375,
+    0.0069965017491254375,
+    0.015492253873063468,
+    0.05247376311844078,
+    0.053973013493253376,
+    0.09745127436281859,
+    0.26186906546726635
+  ],
+  "mean_qlike": {
+    "NN-SV": 0.3262370647815962,
+    "RV-NN-SV": 0.3160651174703629,
+    "SV": 0.33504495169089166,
+    "HAR-RV": 0.29347562586640863,
+    "SHAR-RV": 0.2907417700771231,
+    "log-HAR-RV": 0.3019481186870616,
+    "Realized-GARCH-Gaussian-QMLE": 0.28934166106181775,
+    "NN-ENSEMBLE-EQUAL": 0.31773339690635205,
+    "NN-ENSEMBLE-QLIKE": 0.3159640438982283,
+    "RV-NN-SV-HAR": 0.31090414765023766,
+    "RV-LIN-SV-HAR": 0.28058393954865773
+  },
+  "rank": {
+    "NN-SV": 10,
+    "RV-NN-SV": 8,
+    "SV": 11,
+    "HAR-RV": 4,
+    "SHAR-RV": 3,
+    "log-HAR-RV": 5,
+    "Realized-GARCH-Gaussian-QMLE": 2,
+    "NN-ENSEMBLE-EQUAL": 9,
+    "NN-ENSEMBLE-QLIKE": 7,
+    "RV-NN-SV-HAR": 6,
+    "RV-LIN-SV-HAR": 1
+  },
+  "role": "post-main-analysis expanded set; original nine-model MCS unchanged"
+}

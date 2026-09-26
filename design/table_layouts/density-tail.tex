@@ -1,0 +1,82 @@
+\begin{table}[p]
+\centering
+\caption{One-day distributional calibration and tail comparisons.}
+\label{tab:density-tail}
+\footnotesize
+\renewcommand{\arraystretch}{0.94}
+\noindent\textit{Panel A: Central calibration}\par
+\vspace{0.10em}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lrrrr@{}}
+\toprule
+Market & \shortstack{Student-$t$ state-space\\coverage range} & PIT rejects & \shortstack{RG (G)\\coverage} & Binomial $p$ \\
+\midrule
+@@ROW_0@@
+@@ROW_1@@
+@@ROW_2@@
+\bottomrule
+\end{tabular*}
+
+\vspace{0.45em}
+\noindent\textit{Panel B: VaR exceedance rates and joint VaR-ES loss}\par
+\vspace{0.10em}
+\begin{minipage}[t]{0.49\textwidth}
+\centering
+\textit{1\% tail}\par
+\vspace{0.05em}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llrr@{}}
+\toprule
+Market & Model & \shortstack{Exc.\\(\%)} & $FZ_0$ \\
+\midrule
+@@ROW_3@@
+@@ROW_4@@
+@@ROW_5@@
+@@ROW_6@@
+@@ROW_7@@
+@@ROW_8@@
+@@ROW_9@@
+@@ROW_10@@
+@@ROW_11@@
+\bottomrule
+\end{tabular*}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\textwidth}
+\centering
+\textit{5\% tail}\par
+\vspace{0.05em}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llrr@{}}
+\toprule
+Market & Model & \shortstack{Exc.\\(\%)} & $FZ_0$ \\
+\midrule
+@@ROW_12@@
+@@ROW_13@@
+@@ROW_14@@
+@@ROW_15@@
+@@ROW_16@@
+@@ROW_17@@
+@@ROW_18@@
+@@ROW_19@@
+@@ROW_20@@
+\bottomrule
+\end{tabular*}
+\end{minipage}
+
+\vspace{0.45em}
+\noindent\textit{Panel C: Selected $FZ_0$ differences}\par
+\vspace{0.10em}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrr@{}}
+\toprule
+Comparison & Tail & S\&P~500 & FTSE~100 & DAX \\
+\midrule
+@@ROW_21@@
+@@ROW_22@@
+@@ROW_23@@
+@@ROW_24@@
+\bottomrule
+\end{tabular*}
+
+\vspace{0.35em}
+\begin{minipage}{\textwidth}
+\scriptsize
+\textit{Notes:} Panel A coverage ranges summarise SV, NN-SV, RV-NN-SV, RV-LIN-SV, and RV-RA-NN-SV. ``PIT rejects'' counts one-day Kolmogorov-Smirnov rejections at 5\%; none of the 24 ten-lag Ljung-Box tests rejects, with minimum $p=0.052$. Panel B sample sizes for the S\&P~500, FTSE~100, and DAX are 1012, 1036, and 1029; exceedance rates are percentages, and lower $FZ_0$ is better. G and $t$ denote Gaussian and variance-standardised Student-$t$ Realized GARCH. Panel C reports loss differences with two-sided DM $p$-values (descriptive, unadjusted for multiplicity); negative values favour the first model.
+\end{minipage}
+\end{table}

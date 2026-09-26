@@ -1,0 +1,10 @@
+market,phase,n,span_flags,low_count,both,count_only
+DAX,2017,252,0,0,0,0
+DAX,evaluation,1045,1,0,0,0
+DAX,through_2016,4317,37,14,13,1
+FTSE100,2017,252,0,0,0,0
+FTSE100,evaluation,1049,17,18,14,4
+FTSE100,through_2016,4285,23,14,9,5
+SP500,2017,251,0,0,0,0
+SP500,evaluation,1034,0,0,0,0
+SP500,through_2016,4267,35,14,13,1

@@ -1,0 +1,132 @@
+seed: 20260730
+markets: [SP500, FTSE100, DAX]
+horizons: [1, 5, 10]
+
+sample:
+  estimation_end: 2016-12-31
+  warmup_start: 2017-01-01
+  warmup_end: 2017-12-31
+  oos_start: 2018-01-01
+  oos_end: 2022-02-25
+
+refit:
+  regular_frequency: calendar_month
+  window: expanding
+  adaptive_criterion: relative_effective_sample_size
+  shared_calendar_models: [NN-SV, RV-NN-SV]
+
+state_space:
+  latent_baseline: unforced_ar
+  correction: centered_observable_local_component
+  correction_enters_baseline_recursion: false
+  variance_link: exponential
+  persistence_support: [0.0, 1.0]
+  persistence_logit_median: 0.98
+  persistence_logit_sd: 1.0
+  initial_state_prior_sd: 1.5
+  unforced_ar_marginal_sd_prior: half_normal
+  unforced_ar_target_sd: 0.5
+
+network:
+  input_restriction: observable_predictors_only
+  signed_return_lag: 1
+  realised_variance_lag: 1
+  exact_training_centering: true
+  width: 5
+  first_layer_base_sd: 1.0
+  hidden_bias_sd: 0.2
+  output_log_sd: 0.2
+  target_function_sd: 0.10
+
+returns:
+  plug_in_location_and_scale: true
+  distribution: variance_standardized_student_t
+  degrees_of_freedom_prior:
+    distribution: lognormal_on_nu_minus_two
+    log_mean: 1.791759469228055
+    log_sd: 0.7
+
+models:
+  primary: [NN-SV, RV-NN-SV]
+  functional_form_comparator: RV-LIN-SV
+  descriptive_asymmetry: RV-RA-NN-SV
+  external:
+    - SV
+    - HAR-RV
+    - SHAR-RV
+    - log-HAR-RV
+    - Realized-GARCH-Gaussian-QMLE
+
+forecast:
+  paths: 4096
+  auxiliary_realised_inputs: recursive_forecasts
+
+stacking:
+  models: [NN-SV, RV-NN-SV]
+  half_life_trading_days: 252
+  update_frequency: calendar_month
+  initial_weights: equal
+  unavailable_member_rule: renormalize_available_weights
+
+evaluation:
+  main_sample_policy: main_gap_excluded
+  primary_loss: qlike
+  secondary_loss: variance_mse
+  return_interval_levels: [0.50, 0.90, 0.95]
+  proxy_variance_interval_levels: [0.50, 0.90, 0.95]
+  var_es_levels: [0.05, 0.01]
+  one_day_log_density: finite_mixture
+  multi_day_pit: randomized_finite_ensemble_rank
+  mcs:
+    models:
+      - NN-SV
+      - RV-NN-SV
+      - SV
+      - HAR-RV
+      - SHAR-RV
+      - log-HAR-RV
+      - Realized-GARCH-Gaussian-QMLE
+      - NN-ENSEMBLE-EQUAL
+      - NN-ENSEMBLE-QLIKE
+    bootstrap: stationary
+    replications: 2000
+    alpha: 0.10
+    mean_block_length: 10
+    statistic: T_R
+  dm:
+    alternative: two_sided
+    sample_alignment: pairwise_common_available_dates
+    multiplicity_adjustment: none
+    pairs:
+      - loss_column: qlike
+        model_a: RV-NN-SV
+        model_b: NN-SV
+        horizons: [1, 5, 10]
+      - loss_column: qlike
+        model_a: NN-ENSEMBLE-QLIKE
+        model_b: NN-SV
+        horizons: [1, 5, 10]
+      - loss_column: qlike
+        model_a: NN-ENSEMBLE-QLIKE
+        model_b: RV-NN-SV
+        horizons: [1, 5, 10]
+      - loss_column: qlike
+        model_a: RV-NN-SV
+        model_b: RV-LIN-SV
+        horizons: [1]
+      - loss_column: return_log_score
+        model_a: NN-ENSEMBLE-LOG_SCORE
+        model_b: NN-SV
+        horizons: [1]
+      - loss_column: return_log_score
+        model_a: NN-ENSEMBLE-LOG_SCORE
+        model_b: RV-NN-SV
+        horizons: [1]
+      - loss_column: return_log_score
+        model_a: RV-NN-SV
+        model_b: NN-SV
+        horizons: [1]
+      - loss_column: qlike
+        model_a: RV-RA-NN-SV
+        model_b: RV-NN-SV
+        horizons: [1, 5, 10]
