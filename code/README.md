@@ -104,4 +104,4 @@ The [conditional-analysis design](../design/rv_ra_conditional_value.md) gives
 the extraction, observable-input preparation and analysis commands.
 
 Multiscale, outcome-reconstruction and plotting entrypoints are documented in
-[the package README](../README.md), including each required input and output.
+[the reproduction guide](../REPRODUCING.md), including each required input and output.

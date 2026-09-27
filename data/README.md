@@ -112,7 +112,7 @@ The outcome reconstruction uses separately licensed five-minute SPX, UKX
 and DAX data. Raw prices and reconstructed daily outcome series are not distributed. The
 compact package includes the calculated distribution-score records needed for
 the reported reconstructed-outcome comparisons. `source_identity.json` records relative filenames, hashes and
-construction conventions without price observations. See `../README.md`
+construction conventions without price observations. See `../REPRODUCING.md`
 for acquisition layout, the common span/count screen and the executable
 reconstruction commands. The additional MS forecast panel contains predictions
 and eligibility information only.
