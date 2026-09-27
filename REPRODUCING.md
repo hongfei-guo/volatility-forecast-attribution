@@ -33,7 +33,7 @@ starting point for the evaluation, while
 `code/scripts/generate_forecasts.py` reconstructs the five state-space model
 panels from the documented daily data.
 
-Third-party source observations are excluded. The archive contains calculated
+Third-party source observations are excluded. The repository contains calculated
 evaluation records, whose use remains subject to the applicable source-data terms. Full posterior and predictive-path collections are kept separately; the
 small coefficient posterior and five-origin components are included. The forecast generator can
 write the five predictive-component arrays needed for distributional and
@@ -50,7 +50,7 @@ Heber, Lunde, Shephard and Sheppard (2009), *Oxford-Man Institute's realized
 library*, Version 0.3. The exact source download and terms are linked in
 `data/README.md`.
 
-The compact archive retains the functionals and evaluation records used for
+The repository retains the functionals and evaluation records used for
 log scores, PIT, CRPS, VaR, ES and FZ0 in the reported comparisons. It does not
 retain the full predictive arrays. Researchers with the documented Oxford-Man
 input can generate those arrays and the corresponding loss rows for NN-SV,
@@ -99,14 +99,14 @@ Monte Carlo uncertainty.
 
 ## Reproduce all tables and figures without MCMC
 
-The compact archive includes unrounded prediction functionals, daily evaluation
+The repository includes unrounded prediction functionals, daily evaluation
 records, simulation records, and the small five-origin decomposition components.
 It reconstructs all 21 tables and four figures without either large component
 collection or new MCMC estimation. Lawfully obtained OMI and FirstRate source
 files remain required in the layout documented in `data/README.md` and
 `data/source_identity.json`.
 
-After installing the requirements, run from the extracted archive:
+After installing the requirements, run from the repository root:
 
 ```sh
 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=code .venv/bin/python code/scripts/reproduce.py \
@@ -354,7 +354,7 @@ PYTHONPATH=code .venv/bin/python code/scripts/build_predictive_losses.py \
 The loss builder uses the producer's variance mean, checks it against the
 saved paths when it is a path mean, and computes CRPS, log score, PIT,
 prediction intervals, and one-day analytic VaR, ES, and FZ0. Component files
-are generated locally and are not part of this compact archive.
+are generated locally and are not included in this repository.
 
 After generating the probabilistic, combination and variance-only loss panels
 for the evaluation period, rebuild the distributional tables with:
@@ -700,7 +700,7 @@ to `reproduced/figures/`; `--output` selects a different directory. The cumulati
 and GR commands also accept `--series`, and GR accepts `--summary`. Captions remain
 in the manuscript. `results/figures/` contains reference vector figures.
 
-| Paper result | Calculation | Input required beyond the ZIP |
+| Paper result | Calculation | Additional inputs required |
 |---|---|---|
 | Primary QLIKE tables and MCS | build_variance_losses.py; summarize_evaluation.py | Lawful OMI data |
 | MS and three-period QLIKE tables, expanded MCS | evaluate_comparisons.py | Lawful OMI data and included forecasts |
